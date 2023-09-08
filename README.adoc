@@ -1,5 +1,4 @@
 = Linux Kernel Module Cheat
-:cirosantilli-media-base: https://raw.githubusercontent.com/cirosantilli/media/master/
 :description: The perfect emulation setup to study and develop the <<linux-kernel>> v5.9.2, kernel modules, <<qemu-buildroot-setup,QEMU>>, <<gem5-buildroot-setup,gem5>> and x86_64, ARMv7 and ARMv8 <<userland-assembly,userland>> and <<baremetal-setup,baremetal>> assembly, <<c,ANSI C>>, <<cpp,C++>> and <<posix,POSIX>>. <<gdb>> and <<kgdb>> just work. Powered by <<about-the-qemu-buildroot-setup,Buildroot>> and <<about-the-baremetal-setup,crosstool-NG>>. Highly automated. Thoroughly documented. Automated <<test-this-repo,tests>>. "Tested" in an Ubuntu 20.04 host.
 :idprefix:
 :idseparator: -
@@ -16,8 +15,6 @@ https://zenodo.org/badge/latestdoi/64534859[image:https://zenodo.org/badge/64534
 
 {description}
 
-https://twitter.com/dakami/status/1344853681749934080[Dan Kaminski-approved]™ https://en.wikipedia.org/wiki/Dan_Kaminsky[RIP].
-
 TL;DR: xref:qemu-buildroot-setup-getting-started[xrefstyle=full]
 
 The source code for this page is located at: https://github.com/cirosantilli/linux-kernel-module-cheat[]. Due to https://github.com/isaacs/github/issues/1610[a GitHub limitation], this README is too long and not fully rendered on github.com, so either use:
@@ -25,12 +22,6 @@ The source code for this page is located at: https://github.com/cirosantilli/lin
 * https://cirosantilli.com/linux-kernel-module-cheat
 * https://cirosantilli.com/linux-kernel-module-cheat/index-split[]: split header version
 * <<build-the-documentation,build the docs yourself>>
-
-https://github.com/cirosantilli/china-dictatorship | https://cirosantilli.com/china-dictatorship/xinjiang
-
-image::https://raw.githubusercontent.com/cirosantilli/china-dictatorship-media/master/Xinjiang_prisoners_sitting_identified.jpeg[width=800]
-
-toc::[]
 
 == `--china`
 
@@ -42,11 +33,7 @@ The most important functionality of this repository is the `--china` option, sam
 firefox index.html
 ....
 
-see also: https://cirosantilli.com/china-dictatorship/mirrors
-
 The secondary systems programming functionality is described on the sections below starting from <<getting-started>>.
-
-image::https://raw.githubusercontent.com/cirosantilli/china-dictatorship-media/master/Tiananmen_cute_girls.jpg[width=800]
 
 == Getting started
 
@@ -17005,11 +16992,11 @@ Grepping the logs with `grep '@my_thread_main\+24` shows where the first non-ato
 
 ....
 [many other CPU1 hits]
-471199000: ExecEnable: system.cpu1: A0 T0 : @my_thread_main+24    :   ldr   x1, [x2]           : MemRead :  D=0x000000000000002e A=0x412068  flags=(IsInteger|IsMemRef|IsLoad)                                                                                                  
-471207000: ExecEnable: system.cpu1: A0 T0 : @my_thread_main+24    :   ldr   x1, [x2]           : MemRead :  D=0x000000000000002f A=0x412068  flags=(IsInteger|IsMemRef|IsLoad)                                                                                                  
-471202000: ExecEnable: system.cpu2: A0 T0 : @my_thread_main+24    :   ldr   x1, [x2]           : MemRead :  D=0x000000000000002f A=0x412068  flags=(IsInteger|IsMemRef|IsLoad)                                                                                                  
-471239000: ExecEnable: system.cpu2: A0 T0 : @my_thread_main+24    :   ldr   x1, [x2]           : MemRead :  D=0x0000000000000030 A=0x412068  flags=(IsInteger|IsMemRef|IsLoad)                                                                                                  
-471228000: ExecEnable: system.cpu1: A0 T0 : @my_thread_main+24    :   ldr   x1, [x2]           : MemRead :  D=0x0000000000000030 A=0x412068  flags=(IsInteger|IsMemRef|IsLoad)                                                                                                  
+471199000: ExecEnable: system.cpu1: A0 T0 : @my_thread_main+24    :   ldr   x1, [x2]           : MemRead :  D=0x000000000000002e A=0x412068  flags=(IsInteger|IsMemRef|IsLoad)
+471207000: ExecEnable: system.cpu1: A0 T0 : @my_thread_main+24    :   ldr   x1, [x2]           : MemRead :  D=0x000000000000002f A=0x412068  flags=(IsInteger|IsMemRef|IsLoad)
+471202000: ExecEnable: system.cpu2: A0 T0 : @my_thread_main+24    :   ldr   x1, [x2]           : MemRead :  D=0x000000000000002f A=0x412068  flags=(IsInteger|IsMemRef|IsLoad)
+471239000: ExecEnable: system.cpu2: A0 T0 : @my_thread_main+24    :   ldr   x1, [x2]           : MemRead :  D=0x0000000000000030 A=0x412068  flags=(IsInteger|IsMemRef|IsLoad)
+471228000: ExecEnable: system.cpu1: A0 T0 : @my_thread_main+24    :   ldr   x1, [x2]           : MemRead :  D=0x0000000000000030 A=0x412068  flags=(IsInteger|IsMemRef|IsLoad)
 471269000: ExecEnable: system.cpu1: A0 T0 : @my_thread_main+24    :   ldr   x1, [x2]           : MemRead :  D=0x0000000000000031 A=0x412068  flags=(IsInteger|IsMemRef|IsLoad)
 ....
 
